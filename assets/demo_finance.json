@@ -1,0 +1,435 @@
+{
+  "title": "The Startup Journey",
+  "description": "Navigate the challenging world of entrepreneurship and financial decision-making. Your choices will determine whether your startup becomes the next unicorn or joins the graveyard of failed ventures.",
+  "startNodeId": "garage_beginning",
+  "nodes": {
+    "garage_beginning": {
+      "id": "garage_beginning",
+      "title": "The Garage Startup",
+      "content": "You're sitting in your garage with your co-founder, Sarah, staring at your revolutionary app prototype. You have $10,000 in savings, a brilliant idea for a productivity app, and three months before your money runs out. The question is: how do you turn this prototype into a thriving business?",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800",
+      "choices": [
+        {
+          "id": "bootstrap_approach",
+          "text": "Bootstrap the company - keep full control and grow organically",
+          "nextNodeId": "bootstrap_path"
+        },
+        {
+          "id": "seek_funding",
+          "text": "Seek angel investors or venture capital funding",
+          "nextNodeId": "funding_search"
+        },
+        {
+          "id": "validate_first",
+          "text": "Focus on customer validation before any major decisions",
+          "nextNodeId": "customer_validation"
+        }
+      ]
+    },
+    "bootstrap_path": {
+      "id": "bootstrap_path",
+      "title": "The Self-Funded Journey",
+      "content": "You decide to bootstrap your startup, maintaining full control over your vision. After three months of intense development and minimal marketing, you've built a solid MVP and acquired 500 users. However, your savings are nearly depleted, and a competitor just raised $2M in funding. You need to make money fast.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "choices": [
+        {
+          "id": "freemium_model",
+          "text": "Launch a freemium model with premium features",
+          "nextNodeId": "freemium_launch"
+        },
+        {
+          "id": "consulting_pivot",
+          "text": "Pivot to consulting services to generate immediate revenue",
+          "nextNodeId": "consulting_revenue"
+        },
+        {
+          "id": "late_funding",
+          "text": "Seek emergency funding now that you have traction",
+          "nextNodeId": "desperate_funding"
+        }
+      ]
+    },
+    "funding_search": {
+      "id": "funding_search",
+      "title": "The Pitch Circuit",
+      "content": "You spend weeks perfecting your pitch deck and networking with investors. After 50 rejections, you finally get interest from two sources: a traditional VC firm offering $500K for 25% equity, and a strategic investor (a large tech company) offering $1M for 40% equity plus a partnership deal.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "choices": [
+        {
+          "id": "vc_deal",
+          "text": "Accept the VC deal - less money but more independence",
+          "nextNodeId": "vc_partnership"
+        },
+        {
+          "id": "strategic_deal",
+          "text": "Accept the strategic investor deal - more money but less control",
+          "nextNodeId": "strategic_partnership"
+        },
+        {
+          "id": "negotiate_terms",
+          "text": "Try to negotiate better terms with both parties",
+          "nextNodeId": "negotiation_phase"
+        }
+      ]
+    },
+    "customer_validation": {
+      "id": "customer_validation",
+      "title": "The Validation Phase",
+      "content": "You spend two months conducting customer interviews, surveys, and building a landing page to test demand. The results are mixed: 60% of potential customers love the concept, but only 20% are willing to pay your proposed price point. You've learned valuable lessons but burned through half your savings.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "choices": [
+        {
+          "id": "pivot_pricing",
+          "text": "Pivot to a lower price point with higher volume strategy",
+          "nextNodeId": "volume_strategy"
+        },
+        {
+          "id": "premium_positioning",
+          "text": "Double down on premium positioning for the 20% willing to pay",
+          "nextNodeId": "premium_strategy"
+        },
+        {
+          "id": "feature_pivot",
+          "text": "Pivot the product based on customer feedback",
+          "nextNodeId": "product_pivot"
+        }
+      ]
+    },
+    "freemium_launch": {
+      "id": "freemium_launch",
+      "title": "The Freemium Gamble",
+      "content": "Your freemium model launches successfully, attracting 10,000 free users in the first month. However, only 2% convert to paid plans, generating just $1,000 in monthly recurring revenue. You're growing fast but burning cash even faster. A competitor offers to acquire your user base for $50,000.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "choices": [
+        {
+          "id": "accept_acquisition",
+          "text": "Accept the acquisition offer and cut your losses",
+          "nextNodeId": "early_exit"
+        },
+        {
+          "id": "optimize_conversion",
+          "text": "Focus intensively on improving conversion rates",
+          "nextNodeId": "conversion_optimization"
+        },
+        {
+          "id": "paid_marketing",
+          "text": "Invest remaining funds in paid marketing to scale faster",
+          "nextNodeId": "marketing_blitz"
+        }
+      ]
+    },
+    "vc_partnership": {
+      "id": "vc_partnership",
+      "title": "The VC-Backed Growth",
+      "content": "With $500K in funding, you hire a small team and accelerate development. Six months later, you've grown to 50,000 users and $25K monthly recurring revenue. Your VC is pushing for aggressive growth and suggests raising a Series A. However, you're burning $40K per month and need to show stronger unit economics.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "choices": [
+        {
+          "id": "series_a_prep",
+          "text": "Prepare for Series A fundraising to fuel growth",
+          "nextNodeId": "series_a_round"
+        },
+        {
+          "id": "focus_profitability",
+          "text": "Focus on profitability before raising more money",
+          "nextNodeId": "profitability_focus"
+        },
+        {
+          "id": "strategic_partnerships",
+          "text": "Pursue strategic partnerships to reduce customer acquisition costs",
+          "nextNodeId": "partnership_strategy"
+        }
+      ]
+    },
+    "strategic_partnership": {
+      "id": "strategic_partnership",
+      "title": "The Corporate Partnership",
+      "content": "Your strategic investor provides not just funding but also access to their enterprise customer base. Within six months, you've landed three major corporate clients worth $100K annually each. However, you're becoming increasingly dependent on your investor's ecosystem, and they're pushing for features that benefit them more than your broader market.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "choices": [
+        {
+          "id": "embrace_enterprise",
+          "text": "Fully embrace the enterprise market and their guidance",
+          "nextNodeId": "enterprise_success"
+        },
+        {
+          "id": "maintain_independence",
+          "text": "Try to maintain independence while leveraging their resources",
+          "nextNodeId": "independence_struggle"
+        },
+        {
+          "id": "diversify_customers",
+          "text": "Aggressively diversify your customer base to reduce dependence",
+          "nextNodeId": "diversification_effort"
+        }
+      ]
+    },
+    "conversion_optimization": {
+      "id": "conversion_optimization",
+      "title": "The Optimization Success",
+      "content": "Through relentless A/B testing, user experience improvements, and feature refinements, you manage to increase your conversion rate from 2% to 8%. Your monthly recurring revenue jumps to $8,000, and you're finally approaching break-even. Word spreads about your impressive conversion rates, and investors start reaching out.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "choices": [
+        {
+          "id": "scale_organically",
+          "text": "Continue scaling organically with your proven model",
+          "nextNodeId": "organic_scaling"
+        },
+        {
+          "id": "accept_late_funding",
+          "text": "Accept funding now that you have strong unit economics",
+          "nextNodeId": "funded_scaling"
+        }
+      ]
+    },
+    "series_a_round": {
+      "id": "series_a_round",
+      "title": "The Series A Success",
+      "content": "You successfully raise a $3M Series A round, valuing your company at $12M. With significant funding, you expand your team to 25 people and launch in three new markets. Growth accelerates dramatically, but so do your expenses. You're now the market leader but facing intense competition from well-funded rivals.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "choices": [
+        {
+          "id": "aggressive_expansion",
+          "text": "Pursue aggressive international expansion",
+          "nextNodeId": "global_expansion"
+        },
+        {
+          "id": "product_innovation",
+          "text": "Focus on product innovation to stay ahead of competitors",
+          "nextNodeId": "innovation_focus"
+        },
+        {
+          "id": "acquisition_strategy",
+          "text": "Begin acquiring smaller competitors and complementary startups",
+          "nextNodeId": "acquisition_spree"
+        }
+      ]
+    },
+    "enterprise_success": {
+      "id": "enterprise_success",
+      "title": "The Enterprise Unicorn",
+      "content": "By fully embracing the enterprise market, your startup becomes the go-to solution for large corporations. Within two years, you're generating $10M in annual recurring revenue with 95% customer retention. Your strategic investor helps facilitate an IPO, and you become one of the most successful B2B SaaS companies of the decade.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    },
+    "organic_scaling": {
+      "id": "organic_scaling",
+      "title": "The Bootstrap Success Story",
+      "content": "Your disciplined approach to organic growth pays off magnificently. Over three years, you build a profitable company generating $2M in annual revenue with a lean team of 12 people. You maintain full control of your vision and become a celebrated example of successful bootstrapping in the startup community.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "isEnd": true
+    },
+    "global_expansion": {
+      "id": "global_expansion",
+      "title": "The Global Domination",
+      "content": "Your aggressive international expansion strategy succeeds beyond your wildest dreams. Within 18 months, you're operating in 15 countries with localized products and have achieved $50M in annual recurring revenue. A tech giant offers to acquire your company for $500M, making you and your early team incredibly wealthy.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    },
+    "early_exit": {
+      "id": "early_exit",
+      "title": "The Pragmatic Exit",
+      "content": "You accept the $50,000 acquisition offer, which covers your initial investment and provides a modest return. While not the unicorn success you dreamed of, you've learned valuable lessons about entrepreneurship and customer validation. You use this experience to launch your next, more successful venture.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "isEnd": true
+    },
+    "marketing_blitz": {
+      "id": "marketing_blitz",
+      "title": "The Marketing Disaster",
+      "content": "Your paid marketing campaign burns through your remaining funds quickly without generating sustainable growth. The customer acquisition cost proves too high for your current pricing model, and you're forced to shut down the company. However, the experience teaches you valuable lessons about unit economics and sustainable growth.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "isEnd": true
+    },
+    "consulting_revenue": {
+      "id": "consulting_revenue",
+      "title": "The Service Pivot",
+      "content": "Your pivot to consulting services generates immediate revenue, bringing in $15K per month within two months. However, you're trading time for money and moving away from your scalable product vision. The consulting work is lucrative but prevents you from focusing on product development.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "choices": [
+        {
+          "id": "pure_consulting",
+          "text": "Fully embrace the consulting model and build a service business",
+          "nextNodeId": "consulting_success"
+        },
+        {
+          "id": "hybrid_model",
+          "text": "Use consulting revenue to fund continued product development",
+          "nextNodeId": "hybrid_approach"
+        }
+      ]
+    },
+    "premium_strategy": {
+      "id": "premium_strategy",
+      "title": "The Premium Positioning",
+      "content": "By focusing on the 20% willing to pay premium prices, you build a high-value product for discerning customers. Your customer lifetime value is exceptional, and word-of-mouth marketing drives steady growth. You've built a sustainable, profitable business serving a niche market extremely well.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "isEnd": true
+    },
+    "volume_strategy": {
+      "id": "volume_strategy",
+      "title": "The Volume Play",
+      "content": "Your lower price point attracts massive user adoption, reaching 100,000 users within six months. However, the low margins make profitability challenging, and you're constantly fighting to optimize operations and reduce costs. You've built a large user base but struggle with sustainable unit economics.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "choices": [
+        {
+          "id": "optimize_operations",
+          "text": "Focus on operational efficiency to improve margins",
+          "nextNodeId": "operational_excellence"
+        },
+        {
+          "id": "monetize_data",
+          "text": "Explore alternative revenue streams like data monetization",
+          "nextNodeId": "data_monetization"
+        }
+      ]
+    },
+    "product_pivot": {
+      "id": "product_pivot",
+      "title": "The Successful Pivot",
+      "content": "Based on customer feedback, you pivot to a completely different product that addresses a more pressing need. The pivot proves brilliant - your new product achieves product-market fit immediately, and you grow to $1M in annual recurring revenue within 18 months. Sometimes the best strategy is knowing when to change course.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "isEnd": true
+    },
+    "consulting_success": {
+      "id": "consulting_success",
+      "title": "The Consulting Empire",
+      "content": "You build a successful consulting firm specializing in productivity solutions for enterprises. Within two years, you have a team of 20 consultants and generate $3M in annual revenue. While not the scalable tech startup you originally envisioned, you've built a profitable and sustainable business.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "isEnd": true
+    },
+    "hybrid_approach": {
+      "id": "hybrid_approach",
+      "title": "The Best of Both Worlds",
+      "content": "Your hybrid model proves ingenious - consulting revenue funds product development while providing real-world insights into customer needs. After 18 months, you launch a refined product that perfectly addresses market demands, achieving rapid growth and eventually spinning off the consulting arm as a separate business.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "isEnd": true
+    },
+    "operational_excellence": {
+      "id": "operational_excellence",
+      "title": "The Efficiency Master",
+      "content": "Through relentless focus on operational efficiency, you manage to achieve profitability even with low margins. Your company becomes known for its exceptional operational excellence and serves as a case study for other startups. You've proven that volume businesses can be profitable with the right approach.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "isEnd": true
+    },
+    "data_monetization": {
+      "id": "data_monetization",
+      "title": "The Data Goldmine",
+      "content": "Your exploration of data monetization reveals that your user behavior data is incredibly valuable to market research companies. By carefully balancing user privacy with data insights, you create a new revenue stream that makes your business highly profitable. You've discovered that sometimes the real value isn't in the product itself.",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "isEnd": true
+    },
+    "desperate_funding": {
+      "id": "desperate_funding",
+      "title": "The Desperate Deal",
+      "content": "Seeking funding from a position of weakness results in unfavorable terms. You give up 60% of your company for $200K, barely enough to keep operations running for six months. While you survive the immediate crisis, you've learned the importance of fundraising from a position of strength.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "choices": [
+        {
+          "id": "make_it_work",
+          "text": "Work incredibly hard to prove the investment was worthwhile",
+          "nextNodeId": "redemption_story"
+        },
+        {
+          "id": "accept_minority",
+          "text": "Accept your minority position and focus on execution",
+          "nextNodeId": "minority_success"
+        }
+      ]
+    },
+    "negotiation_phase": {
+      "id": "negotiation_phase",
+      "title": "The Negotiation Backfire",
+      "content": "Your attempt to negotiate better terms backfires when both investors withdraw their offers, feeling you're being greedy and difficult to work with. You're back to square one with dwindling funds and fewer options. This teaches you the importance of knowing when to accept a good deal.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "choices": [
+        {
+          "id": "humble_return",
+          "text": "Swallow your pride and try to re-engage the investors",
+          "nextNodeId": "humble_comeback"
+        },
+        {
+          "id": "bootstrap_fallback",
+          "text": "Fall back to bootstrapping with lessons learned",
+          "nextNodeId": "bootstrap_wisdom"
+        }
+      ]
+    },
+    "redemption_story": {
+      "id": "redemption_story",
+      "title": "The Redemption Arc",
+      "content": "Despite the unfavorable terms, your incredible work ethic and execution turn the company around. Within 18 months, you've grown the business to $5M valuation, and your investors offer to restructure the deal to give you back more equity. Sometimes proving yourself through results is the best negotiation strategy.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "isEnd": true
+    },
+    "bootstrap_wisdom": {
+      "id": "bootstrap_wisdom",
+      "title": "The Wise Bootstrap",
+      "content": "Armed with hard-earned lessons about fundraising and business development, your second attempt at bootstrapping is far more successful. You build a lean, profitable company that grows steadily without external funding, eventually becoming more valuable than if you had taken the original investment deals.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "isEnd": true
+    },
+    "funded_scaling": {
+      "id": "funded_scaling",
+      "title": "The Perfect Timing",
+      "content": "With proven unit economics and strong conversion rates, you're able to raise funding on excellent terms. Investors compete for the opportunity to back your company, and you raise $2M while retaining 80% ownership. Your combination of bootstrap discipline and strategic funding creates the perfect growth trajectory.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "isEnd": true
+    },
+    "profitability_focus": {
+      "id": "profitability_focus",
+      "title": "The Profitable Path",
+      "content": "By focusing on profitability over growth, you build a sustainable business that generates consistent cash flow. While your growth is slower than VC-backed competitors, your profitability makes you attractive for acquisition. A strategic buyer offers $15M for your profitable, growing business.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    },
+    "humble_comeback": {
+      "id": "humble_comeback",
+      "title": "The Humble Success",
+      "content": "Your humble approach to re-engaging investors pays off. One of the original VCs appreciates your honesty about the negotiation mistake and offers a revised deal. The experience teaches you valuable lessons about humility and relationship management in business, leading to a successful long-term partnership.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    },
+    "minority_success": {
+      "id": "minority_success",
+      "title": "The Minority Stakeholder Win",
+      "content": "Despite owning only 40% of your company, your focus on execution and growth creates tremendous value. When the company is eventually acquired for $50M, your 40% stake still makes you wealthy. You've learned that sometimes ownership percentage matters less than the absolute value you create.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "isEnd": true
+    },
+    "independence_struggle": {
+      "id": "independence_struggle",
+      "title": "The Independence Challenge",
+      "content": "Your attempt to maintain independence while leveraging your strategic investor's resources creates ongoing tension. Progress is slower than it could be, and you're constantly navigating competing priorities. Eventually, you realize that sometimes alignment with your investors' goals can be more beneficial than fighting for complete independence.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    },
+    "diversification_effort": {
+      "id": "diversification_effort",
+      "title": "The Diversification Success",
+      "content": "Your aggressive effort to diversify your customer base succeeds, reducing your dependence on your strategic investor while still benefiting from their resources. You achieve the best of both worlds - strategic support when needed and independence to pursue your broader market vision. The company thrives with this balanced approach.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    },
+    "partnership_strategy": {
+      "id": "partnership_strategy",
+      "title": "The Partnership Network",
+      "content": "Your strategic partnerships dramatically reduce customer acquisition costs and accelerate growth. By building a network of complementary businesses, you create multiple revenue streams and achieve sustainable growth. The partnership approach proves more valuable than traditional marketing, leading to a highly successful and profitable business.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    },
+    "innovation_focus": {
+      "id": "innovation_focus",
+      "title": "The Innovation Leader",
+      "content": "Your focus on product innovation keeps you ahead of competitors and creates a sustainable competitive advantage. You become known as the most innovative company in your space, attracting top talent and premium customers. Your innovation-first culture becomes your greatest asset, leading to market leadership and eventual IPO success.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    },
+    "acquisition_spree": {
+      "id": "acquisition_spree",
+      "title": "The Acquisition Strategy",
+      "content": "Your acquisition strategy consolidates the market and creates a comprehensive platform that competitors can't match. By acquiring complementary startups and integrating their technologies, you build an ecosystem that becomes the industry standard. The strategy culminates in a successful IPO that values your company at over $1 billion.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      "isEnd": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+name: thesubquest
+version: 1.0.0
+description: AI-assisted, community-driven storytelling game for Reddit communities
+author: SubQuest Team
+permissions:
+  - redditAPI  # Reddit API access for posts, comments, and user interactions
+  - redis      # Data persistence for game state and story progress
+  - media      # Image upload and processing for story visuals

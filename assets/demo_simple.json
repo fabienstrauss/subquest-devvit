@@ -1,0 +1,124 @@
+{
+  "title": "The Mysterious Cave",
+  "description": "A simple adventure story perfect for testing SubQuest",
+  "startNodeId": "entrance",
+  "nodes": {
+    "entrance": {
+      "id": "entrance",
+      "title": "The Cave Entrance",
+      "content": "You stand before a dark cave entrance. Ancient symbols are carved into the stone archway, and a cool breeze flows from within. Your torch flickers in the wind.\n\nWhat do you do?",
+      "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+      "choices": [
+        {
+          "id": "enter_boldly",
+          "text": "Enter the cave boldly with torch held high",
+          "nextNodeId": "main_chamber"
+        },
+        {
+          "id": "examine_symbols",
+          "text": "Examine the ancient symbols first",
+          "nextNodeId": "symbols_clue"
+        },
+        {
+          "id": "turn_back",
+          "text": "This seems too dangerous, turn back",
+          "nextNodeId": "coward_ending"
+        }
+      ]
+    },
+    "main_chamber": {
+      "id": "main_chamber",
+      "title": "The Main Chamber",
+      "content": "You stride confidently into the cave. The main chamber opens up before you, vast and echoing. Your torch illuminates ancient paintings on the walls and two passages leading deeper into the cave.\n\nTo your left, you hear the sound of running water. To your right, you see a faint golden glow.",
+      "imageUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800",
+      "choices": [
+        {
+          "id": "follow_water",
+          "text": "Follow the sound of water to the left",
+          "nextNodeId": "underground_river"
+        },
+        {
+          "id": "investigate_glow",
+          "text": "Investigate the golden glow to the right",
+          "nextNodeId": "treasure_chamber"
+        }
+      ]
+    },
+    "symbols_clue": {
+      "id": "symbols_clue",
+      "title": "Ancient Wisdom",
+      "content": "You study the symbols carefully. They seem to tell a story of ancient guardians and hidden treasure. One symbol clearly shows a warning about water, while another depicts gold and danger.\n\nArmed with this knowledge, you enter the cave more cautiously.",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+      "choices": [
+        {
+          "id": "heed_water_warning",
+          "text": "Remember the water warning and avoid the left passage",
+          "nextNodeId": "treasure_chamber"
+        },
+        {
+          "id": "ignore_warnings",
+          "text": "Ignore the warnings and explore freely",
+          "nextNodeId": "main_chamber"
+        }
+      ]
+    },
+    "underground_river": {
+      "id": "underground_river",
+      "title": "The Underground River",
+      "content": "You follow the sound of water and discover a rushing underground river. The current is strong and the water is deep. As you lean over to look, you slip on the wet rocks!\n\nYou fall into the river and are swept away by the current. Despite your struggles, you cannot escape the powerful flow.",
+      "imageUrl": "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800",
+      "isEnd": true
+    },
+    "treasure_chamber": {
+      "id": "treasure_chamber",
+      "title": "The Treasure Chamber",
+      "content": "You discover a chamber filled with ancient gold and jewels! Piles of coins glitter in your torchlight, and ornate artifacts line the walls.\n\nBut as you step forward, you hear a low growling sound. A massive cave guardian emerges from the shadows, its eyes glowing red.",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+      "choices": [
+        {
+          "id": "fight_guardian",
+          "text": "Stand your ground and fight the guardian",
+          "nextNodeId": "heroic_victory"
+        },
+        {
+          "id": "try_diplomacy",
+          "text": "Try to communicate with the guardian",
+          "nextNodeId": "peaceful_resolution"
+        },
+        {
+          "id": "grab_and_run",
+          "text": "Grab some treasure and run",
+          "nextNodeId": "narrow_escape"
+        }
+      ]
+    },
+    "heroic_victory": {
+      "id": "heroic_victory",
+      "title": "Victory!",
+      "content": "You raise your torch like a weapon and face the guardian bravely. The creature, impressed by your courage, bows its head in respect.\n\n'You have proven yourself worthy,' it speaks in an ancient voice. 'Take what you need, but leave some for future heroes.'\n\nYou emerge from the cave with a modest amount of treasure and an incredible story. Your bravery has been rewarded!",
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800",
+      "isEnd": true
+    },
+    "peaceful_resolution": {
+      "id": "peaceful_resolution",
+      "title": "Wisdom Prevails",
+      "content": "You lower your torch and speak calmly to the guardian. 'I mean no harm. I seek only knowledge and adventure.'\n\nThe ancient creature studies you carefully, then nods. 'Your wisdom serves you well. Take this.' It hands you a small but incredibly valuable gem.\n\n'This will provide for you better than all the gold here. Use it wisely.' You leave the cave with the magical gem and the guardian's blessing.",
+      "imageUrl": "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800",
+      "isEnd": true
+    },
+    "narrow_escape": {
+      "id": "narrow_escape",
+      "title": "A Close Call",
+      "content": "You quickly grab a handful of coins and bolt for the exit. The guardian roars and gives chase, but you're too quick!\n\nYou escape the cave with your heart pounding and a small amount of treasure. It's not much, but you lived to tell the tale. Sometimes discretion is the better part of valor!",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      "isEnd": true
+    },
+    "coward_ending": {
+      "id": "coward_ending",
+      "title": "Safety First",
+      "content": "You decide the cave looks too dangerous and turn back. As you walk away, you hear a faint sound of laughter echoing from within.\n\nYou return home safely, but you'll always wonder what adventures you missed. Sometimes the greatest risk is not taking any risk at all.",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      "isEnd": true
+    }
+  }
+}
