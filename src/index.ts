@@ -328,6 +328,80 @@ Devvit.addMenuItem({
   },
 });
 
+Devvit.addMenuItem({
+  label: '🔍 Debug Game State',
+  location: 'subreddit',
+  onPress: async (event, context) => {
+    try {
+      const redisManager = new RedisManager(context);
+      const gameState = await redisManager.getGameState();
+      const schedulerHandler = new SchedulerHandler(context);
+      
+      if (!gameState) {
+        return context.ui.showToast('❌ No game state found');
+      }
+
+      const timeRemaining = await new StoryEngine(context).getTimeRemainingInRound();
+      const minutesRemaining = Math.round(timeRemaining / (1000 * 60));
+      const nextSchedule = await schedulerHandler.getNextScheduledRound();
+      
+      let message = `🔍 Debug Info\n\n`;
+      message += `Round: ${gameState.roundNumber}\n`;
+      message += `Node: ${gameState.currentNodeId}\n`;
+      message += `Test Mode: ${gameState.testMode ? 'YES' : 'NO'}\n`;
+      message += `Duration: ${gameState.roundDurationHours} ${gameState.testMode ? 'min' : 'hrs'}\n`;
+      message += `Time Left: ${minutesRemaining} min\n`;
+      message += `Started: ${new Date(gameState.roundStartTime).toLocaleTimeString()}\n`;
+      message += `Next Schedule: ${nextSchedule ? 'YES' : 'NO'}`;
+
+      return context.ui.showToast(message);
+    } catch (error) {
+      Logger.error('DebugGameState', error);
+      return context.ui.showToast('❌ Debug error');
+    }
+  },
+});
+
+Devvit.addMenuItem({
+  label: '⚡ Force Schedule Check',
+  location: 'subreddit',
+  onPress: async (event, context) => {
+    try {
+      const schedulerHandler = new SchedulerHandler(context);
+      const redisManager = new RedisManager(context);
+      const gameState = await redisManager.getGameState();
+      
+      if (!gameState?.isActive) {
+        return context.ui.showToast('❌ No active game to schedule');
+      }
+
+      // Check if round is due for advancement
+      const isDue = await schedulerHandler.isRoundAdvancementDue();
+      
+      if (isDue) {
+        // Manually trigger advancement
+        const result = await schedulerHandler.manualRoundAdvancement(gameState.roundNumber);
+        if (result.success) {
+          return context.ui.showToast(`✅ Round was overdue and advanced! ${result.details}`);
+        } else {
+          return context.ui.showToast(`❌ Overdue round failed to advance: ${result.error}`);
+        }
+      } else {
+        // Re-schedule if needed
+        const scheduleResult = await schedulerHandler.scheduleNextRound(gameState.roundDurationHours, gameState.roundNumber);
+        if (scheduleResult.success) {
+          return context.ui.showToast(`✅ Scheduler refreshed: ${scheduleResult.jobId}`);
+        } else {
+          return context.ui.showToast(`❌ Schedule refresh failed: ${scheduleResult.error}`);
+        }
+      }
+    } catch (error) {
+      Logger.error('ForceScheduleCheck', error);
+      return context.ui.showToast('❌ Schedule check error');
+    }
+  },
+});
+
 // Logging utility
 class Logger {
   static error(operation: string, error: any): void {

@@ -571,8 +571,8 @@ export class SchedulerHandler {
         };
       }
 
-      // Schedule the first round advancement
-      const scheduleResult = await this.scheduleNextRound(roundDurationHours, gameState.roundNumber);
+      // Schedule the first round advancement using game state duration (which handles test mode)
+      const scheduleResult = await this.scheduleNextRound(gameState.roundDurationHours, gameState.roundNumber);
       
       if (!scheduleResult.success) {
         return {
@@ -586,7 +586,7 @@ export class SchedulerHandler {
       return {
         success: true,
         jobId: scheduleResult.jobId,
-        details: `First round scheduled for ${roundDurationHours} hours from now`
+        details: `First round scheduled for ${gameState.roundDurationHours} ${gameState.testMode ? 'minutes' : 'hours'} from now`
       };
 
     } catch (error) {
