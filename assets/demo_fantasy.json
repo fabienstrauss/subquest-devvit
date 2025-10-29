@@ -1,0 +1,261 @@
+{
+  "title": "The Dragon's Crown",
+  "description": "An epic fantasy adventure where you play as a brave knight seeking the legendary Dragon's Crown. Your choices will determine whether you become a hero of legend or meet a tragic fate.",
+  "startNodeId": "village_start",
+  "nodes": {
+    "village_start": {
+      "id": "village_start",
+      "title": "The Village of Thornwick",
+      "content": "You arrive at the village of Thornwick as the sun sets behind the mountains. The villagers speak in hushed tones about the Dragon's Crown, a legendary artifact hidden in the Shadowpeak Mountains. An old sage approaches you with urgent news: 'The dragon Pyraxis has awakened and threatens our lands. Only the Crown can stop him, but the path is treacherous.' How do you prepare for your quest?",
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800",
+      "choices": [
+        {
+          "id": "gather_supplies",
+          "text": "Visit the blacksmith and gather supplies for the journey",
+          "nextNodeId": "blacksmith_shop"
+        },
+        {
+          "id": "seek_wisdom",
+          "text": "Consult the village oracle for guidance and prophecy",
+          "nextNodeId": "oracle_chamber"
+        },
+        {
+          "id": "immediate_departure",
+          "text": "Leave immediately while you still have daylight",
+          "nextNodeId": "mountain_path"
+        }
+      ]
+    },
+    "blacksmith_shop": {
+      "id": "blacksmith_shop",
+      "title": "The Master Smith's Forge",
+      "content": "The village blacksmith, a grizzled dwarf named Thorin, examines your equipment with a critical eye. 'Aye, you'll need better than this to face a dragon,' he grumbles. He offers you a choice of enchanted weapons from his private collection, each with its own legendary history.",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+      "choices": [
+        {
+          "id": "flame_sword",
+          "text": "Choose the Flame Sword - 'Forged in dragon fire itself'",
+          "nextNodeId": "mountain_path_prepared"
+        },
+        {
+          "id": "ice_spear",
+          "text": "Choose the Ice Spear - 'Cold as winter's heart'",
+          "nextNodeId": "mountain_path_prepared"
+        },
+        {
+          "id": "shadow_bow",
+          "text": "Choose the Shadow Bow - 'Strikes from the darkness'",
+          "nextNodeId": "mountain_path_prepared"
+        }
+      ]
+    },
+    "oracle_chamber": {
+      "id": "oracle_chamber",
+      "title": "The Oracle's Vision",
+      "content": "The oracle, her eyes glowing with mystical power, gazes into the swirling mists of her crystal sphere. 'I see three paths before you, brave knight. One leads through the Whispering Woods where ancient spirits dwell. Another crosses the Frozen Wastes where ice giants roam. The third... the third goes directly through the dragon's domain.' Her voice trembles as she speaks the final words.",
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800",
+      "choices": [
+        {
+          "id": "spirit_path",
+          "text": "Take the path through the Whispering Woods",
+          "nextNodeId": "whispering_woods"
+        },
+        {
+          "id": "frozen_path",
+          "text": "Brave the Frozen Wastes and the ice giants",
+          "nextNodeId": "frozen_wastes"
+        },
+        {
+          "id": "dragon_path",
+          "text": "Face the dragon directly - the most dangerous path",
+          "nextNodeId": "dragon_lair_direct"
+        }
+      ]
+    },
+    "mountain_path": {
+      "id": "mountain_path",
+      "title": "The Treacherous Ascent",
+      "content": "Without proper preparation, you struggle up the mountain path as darkness falls. The wind howls through the peaks, and you hear the distant roar of the dragon echoing through the valleys. Your basic equipment feels inadequate against the challenges ahead, but your determination drives you forward.",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      "choices": [
+        {
+          "id": "continue_unprepared",
+          "text": "Press on despite being unprepared",
+          "nextNodeId": "mountain_ambush"
+        },
+        {
+          "id": "find_shelter",
+          "text": "Seek shelter and wait for dawn",
+          "nextNodeId": "mountain_cave"
+        }
+      ]
+    },
+    "mountain_path_prepared": {
+      "id": "mountain_path_prepared",
+      "title": "The Well-Armed Journey",
+      "content": "With your enchanted weapon in hand and supplies from the blacksmith, you feel confident as you ascend the mountain path. The weapon pulses with magical energy, and you sense it will serve you well in the trials ahead. As you climb higher, you spot smoke rising from a distant peak - the dragon's lair.",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      "choices": [
+        {
+          "id": "direct_approach",
+          "text": "Head directly toward the dragon's lair",
+          "nextNodeId": "dragon_lair_prepared"
+        },
+        {
+          "id": "scout_area",
+          "text": "Scout the area for alternative approaches",
+          "nextNodeId": "hidden_passage"
+        }
+      ]
+    },
+    "whispering_woods": {
+      "id": "whispering_woods",
+      "title": "The Realm of Ancient Spirits",
+      "content": "The Whispering Woods live up to their name as ghostly voices echo through the ancient trees. Ethereal figures drift between the trunks, and you realize these are the spirits of knights who attempted this quest before you. One spirit, more solid than the others, approaches with a warning: 'The Crown lies beyond the Spirit Gate, but only those pure of heart may pass.'",
+      "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+      "choices": [
+        {
+          "id": "prove_worth",
+          "text": "Accept the spirits' trial to prove your worth",
+          "nextNodeId": "spirit_trial"
+        },
+        {
+          "id": "force_passage",
+          "text": "Try to force your way through the Spirit Gate",
+          "nextNodeId": "spirit_wrath"
+        }
+      ]
+    },
+    "frozen_wastes": {
+      "id": "frozen_wastes",
+      "title": "The Land of Eternal Winter",
+      "content": "The Frozen Wastes stretch endlessly before you, a barren landscape of ice and snow. In the distance, you see the massive forms of ice giants moving across the frozen plains. The cold bites through your armor, and you know you must find a way past these ancient guardians of the wasteland.",
+      "imageUrl": "https://images.unsplash.com/photo-1551524164-6cf2ac531fb4?w=800",
+      "choices": [
+        {
+          "id": "negotiate_giants",
+          "text": "Attempt to negotiate with the ice giants",
+          "nextNodeId": "giant_council"
+        },
+        {
+          "id": "stealth_passage",
+          "text": "Try to sneak past the giants under cover of a blizzard",
+          "nextNodeId": "blizzard_crossing"
+        }
+      ]
+    },
+    "dragon_lair_direct": {
+      "id": "dragon_lair_direct",
+      "title": "The Dragon's Domain",
+      "content": "You approach Pyraxis's lair directly, the most dangerous path of all. The ancient dragon emerges from his mountain fortress, his scales gleaming like molten gold in the firelight. 'So, another knight comes seeking the Crown,' he rumbles, his voice like thunder. 'You are either very brave or very foolish. Perhaps both.'",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+      "choices": [
+        {
+          "id": "challenge_dragon",
+          "text": "Challenge the dragon to single combat",
+          "nextNodeId": "dragon_battle"
+        },
+        {
+          "id": "riddle_contest",
+          "text": "Propose a contest of riddles instead of combat",
+          "nextNodeId": "dragon_riddles"
+        }
+      ]
+    },
+    "spirit_trial": {
+      "id": "spirit_trial",
+      "title": "The Trial of Hearts",
+      "content": "The spirits surround you in a circle of ethereal light. 'Answer truly,' they whisper in unison, 'and the path shall open. Lie, and join us in eternal wandering.' They pose their question: 'Why do you seek the Dragon's Crown? For glory, for gold, or for the good of all?'",
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800",
+      "choices": [
+        {
+          "id": "for_people",
+          "text": "I seek it to protect the innocent people of the realm",
+          "nextNodeId": "crown_chamber_blessed"
+        },
+        {
+          "id": "for_glory",
+          "text": "I seek glory and to be remembered as a hero",
+          "nextNodeId": "spirit_rejection"
+        }
+      ]
+    },
+    "dragon_battle": {
+      "id": "dragon_battle",
+      "title": "The Final Battle",
+      "content": "The battle with Pyraxis is legendary in its intensity. Fire and steel clash as you dodge the dragon's mighty claws and searing breath. In the end, your courage and skill prove victorious. As the great dragon falls, he speaks his final words: 'You have earned the Crown, brave knight. Use its power wisely.' The Dragon's Crown materializes before you, pulsing with ancient magic.",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+      "isEnd": true
+    },
+    "crown_chamber_blessed": {
+      "id": "crown_chamber_blessed",
+      "title": "The Crown of Legend",
+      "content": "The spirits, satisfied with your pure intentions, guide you to a hidden chamber where the Dragon's Crown rests upon an ancient pedestal. As you approach, the Crown glows with warm, golden light, recognizing your noble heart. You have achieved your quest through wisdom and virtue, and the realm will know peace once more.",
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800",
+      "isEnd": true
+    },
+    "mountain_ambush": {
+      "id": "mountain_ambush",
+      "title": "The Goblin Ambush",
+      "content": "Your unprepared state proves costly as mountain goblins ambush you on the narrow path. Without proper weapons or supplies, you fight valiantly but are overwhelmed. Your quest ends here, but your brave attempt will be remembered by the villagers of Thornwick.",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      "isEnd": true
+    },
+    "dragon_riddles": {
+      "id": "dragon_riddles",
+      "title": "The Contest of Minds",
+      "content": "Pyraxis, intrigued by your proposal, agrees to the contest. 'Very well, knight. Answer my three riddles correctly, and the Crown is yours. Fail, and you become part of my treasure hoard.' Through wit and wisdom, you solve each riddle, earning the dragon's respect. 'Impressive,' he admits, 'the Crown is yours by right of intellect.'",
+      "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800",
+      "isEnd": true
+    },
+    "spirit_rejection": {
+      "id": "spirit_rejection",
+      "title": "The Spirits' Judgment",
+      "content": "The spirits recoil at your answer, their forms becoming more menacing. 'Glory-seekers have no place here,' they wail. 'Join us in our eternal wandering, for you are not worthy of the Crown.' Your quest ends as you become one with the restless spirits of the Whispering Woods.",
+      "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+      "isEnd": true
+    },
+    "mountain_cave": {
+      "id": "mountain_cave",
+      "title": "The Hermit's Wisdom",
+      "content": "In the cave, you discover an old hermit who has been watching the dragon for decades. 'Patience, young knight,' he says, offering you food and wisdom. 'The dragon sleeps at dawn. That is when you must strike.' His guidance proves invaluable, and you successfully claim the Crown while Pyraxis slumbers.",
+      "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+      "isEnd": true
+    },
+    "giant_council": {
+      "id": "giant_council",
+      "title": "The Ice Giants' Bargain",
+      "content": "The ice giants, ancient and wise, listen to your plea. Their leader, a massive being of ice and stone, speaks: 'We will grant you passage, knight, but only if you promise to use the Crown to restore the balance between fire and ice.' You agree, and they guide you safely to the Crown's resting place.",
+      "imageUrl": "https://images.unsplash.com/photo-1551524164-6cf2ac531fb4?w=800",
+      "isEnd": true
+    },
+    "hidden_passage": {
+      "id": "hidden_passage",
+      "title": "The Secret Path",
+      "content": "Your scouting reveals a hidden passage that leads directly to the Crown's chamber, bypassing the dragon entirely. Sometimes wisdom and preparation triumph over brute force. You claim the Dragon's Crown without bloodshed, proving that the greatest victories come through intelligence and planning.",
+      "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+      "isEnd": true
+    },
+    "dragon_lair_prepared": {
+      "id": "dragon_lair_prepared",
+      "title": "The Prepared Knight's Victory",
+      "content": "With your enchanted weapon and proper preparation, you face Pyraxis on equal terms. The battle is fierce but fair, and your preparation makes all the difference. The dragon, impressed by your readiness and skill, yields the Crown to you with respect. 'You came prepared, knight. That shows wisdom worthy of the Crown.'",
+      "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+      "isEnd": true
+    },
+    "spirit_wrath": {
+      "id": "spirit_wrath",
+      "title": "The Spirits' Vengeance",
+      "content": "Your attempt to force passage through the Spirit Gate enrages the ancient spirits. They unleash their wrath upon you, and your quest ends in the haunted depths of the Whispering Woods. Sometimes, respect and humility are more powerful than force.",
+      "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+      "isEnd": true
+    },
+    "blizzard_crossing": {
+      "id": "blizzard_crossing",
+      "title": "Lost in the Storm",
+      "content": "The blizzard proves more treacherous than expected. Despite your stealth, you become lost in the swirling snow and ice. Your quest ends in the Frozen Wastes, but legends will speak of the brave knight who dared to challenge the eternal winter.",
+      "imageUrl": "https://images.unsplash.com/photo-1551524164-6cf2ac531fb4?w=800",
+      "isEnd": true
+    }
+  }
+}
