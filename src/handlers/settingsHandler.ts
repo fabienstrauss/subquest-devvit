@@ -528,10 +528,10 @@ export class SettingsHandler {
         } else if (duration > 168) {
           errors.push('Round duration cannot exceed 168 hours (1 week)');
         } else {
-          // Apply test mode conversion: hours become minutes (with 2-minute minimum)
+          // Apply test mode conversion: in test mode, use 2-minute rounds
           if (formData.testMode) {
-            duration = Math.max(2, duration * 2); // Convert hours to 2-minute intervals
-            console.log(`[SettingsHandler] Test mode enabled: ${formData.roundDurationHours}h → ${duration} minutes`);
+            duration = 2; // Fixed 2-minute rounds in test mode
+            console.log(`[SettingsHandler] Test mode enabled: Using ${duration} minute rounds`);
           }
           
           processedData.roundDurationHours = duration;
